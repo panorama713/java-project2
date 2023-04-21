@@ -8,6 +8,17 @@ public class Point {
         return x == y;
     }
 
+    // 도전과제 : 두 점 사이의 거리를 구하는 함수
+    double getDistance(Point p2) {
+        int xL = p2.x - this.x;
+        int yL = p2.y - this.y;
+
+        double sumOfPow = Math.pow(xL, 2) + Math.pow(yL, 2);
+        double result = Math.sqrt(sumOfPow);
+
+        return result;
+    }
+
     public static void main(String[] args) {
         Point p1 = new Point();
         System.out.printf("x: %d, y: %d", p1.x, p1.y);
