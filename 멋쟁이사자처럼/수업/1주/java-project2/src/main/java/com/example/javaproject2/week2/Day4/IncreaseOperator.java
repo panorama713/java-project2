@@ -1,4 +1,4 @@
-package com.example.javaproject2.week2.Day4;
+package com.example.javaproject2.week2.day4;
 
 public class IncreaseOperator {
     public static void main(String[] args) {
