@@ -9,19 +9,12 @@ public class BubbleSort {
 
         while (true) {
             // 정렬 실행 순회
+            int check = 0;
             for (int i = 0; i < arr.length - 1; i++) {
                 if (arr[i] > arr[i + 1]) {
                     int tmp = arr[i];
                     arr[i] = arr[i + 1];
                     arr[i+ 1] = tmp;
-                }
-            }
-
-            // 오름차순 정렬이 되었는지 확인
-            int check = 0;
-            for (int i = 0; i < arr.length - 1; i++) {
-                if (arr[i] > arr[i + 1]) {
-                    break;
                 } else {
                     check++;
                 }
