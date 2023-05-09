@@ -7,9 +7,12 @@ public class Pyramid2 {
         this.spaceChar = spaceChar;
     }
 
+    public String makeALine(int height, int i) {
+        return String.format("%s%s\n", spaceChar.repeat(height - i), "*".repeat(2 * i - 1));
+    }
     public void printPyramid(int height) {
         for (int i = height; i > 0; i--) {
-            System.out.printf("%s%s\n", spaceChar.repeat(height - i), "*".repeat(2 * i - 1));
+            System.out.printf(makeALine(height, i));
         }
     }
 
