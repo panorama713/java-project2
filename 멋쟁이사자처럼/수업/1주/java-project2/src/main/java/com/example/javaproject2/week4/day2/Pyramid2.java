@@ -19,5 +19,6 @@ public class Pyramid2 {
     public static void main(String[] args) {
         Pyramid2 pyramid2 = new Pyramid2(" ");
         pyramid2.printPyramid(5);
+        pyramid2.printPyramid(4);
     }
 }
