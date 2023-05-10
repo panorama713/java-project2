@@ -4,9 +4,19 @@ import java.util.Arrays;
 
 public class SugarStickOOP {
     private int[][] arr;
+    private boolean printSeparator;
 
     public SugarStickOOP(int rowCnt, int colCnt) {
         this.arr = new int[rowCnt][colCnt];
+    }
+
+    public SugarStickOOP(boolean printSeparator) {
+        this.arr = new int[5][5];
+        this.printSeparator = printSeparator;
+    }
+
+    public SugarStickOOP(int rowCnt) {
+        this.arr = new int[rowCnt][5];
     }
 
     public void setBeam(int l, int d, int x, int y) {
@@ -16,7 +26,7 @@ public class SugarStickOOP {
             }
         } else { // 세로
             for (int i = 0; i < l; i++) {
-                arr[y - 1 + i][x - 1 + i] = 1;
+                arr[y - 1 + i][x - 1] = 1;
             }
         }
     }
@@ -29,10 +39,14 @@ public class SugarStickOOP {
     }
 
     public static void main(String[] args) {
-        int rowCnt = 5;
-        int colCnt = 5;
+        int rowCnt = 7;
+        int colCnt = 7;
         SugarStickOOP sugarStickOOP = new SugarStickOOP(rowCnt, colCnt);
         sugarStickOOP.setBeam(2,0,1,1);
         sugarStickOOP.printArr();
+
+        SugarStickOOP sugarStickOOP2 = new SugarStickOOP(false);
+        sugarStickOOP2.setBeam(2,0,1,1);
+        sugarStickOOP2.printArr();
     }
 }
